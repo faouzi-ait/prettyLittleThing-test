@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-size: 62.5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  margin: 0;
+  font-family: Arial, 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
+  width: 40%;
+  margin: 1rem auto;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.price::after {
+  content: '£'
+}
+
+.detail-page {
+  width: 30%;
+  margin: 0 auto;
+  font-size: 1.3rem;
+}
+
+.detail-name,
+.detail-colour,
+.detail-price {
+  font-size: 1.5rem !important;
+  margin-bottom: .5rem;
+}
+
+.detail-price::after {
+  content: '£'
+}
+
+button {
+  display: inline;
+  margin: .5rem .5rem .5rem 0;
+  padding: 5px 10px
+}
+
+.back {
+  display: block !important;
+}
+
+.left-align {
+  margin: 0 auto;
+}
+
+.column {
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.inner-container {
+  display: flex;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inner-container .image{
+  margin-right: 2rem;
+}
+
+.inner-container button{
+  padding: 0 !important
 }
