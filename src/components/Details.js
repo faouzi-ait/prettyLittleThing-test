@@ -37,7 +37,7 @@ function Details(props) {
 
   return (
     <section className="detail-page">
-      <img src={product?.img} alt="product" width="200" />
+      {product.img && <img src={product.img} alt="product" width="200" />}
       <div>
         <div className="detail-name">{product?.name}</div>
         <div className="detail-colour">
