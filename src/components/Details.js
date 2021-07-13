@@ -37,7 +37,20 @@ function Details(props) {
 
   return (
     <section className="detail-page">
-      {product.img && <img src={product.img} alt="product" width="200" />}
+      {product.img ? (
+        <img src={product.img} alt="product" width="200" />
+      ) : (
+        <div
+          style={{
+            width: '170px',
+            height: '170px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+          <img src="/spinner.gif" alt="" />
+        </div>
+      )}
       <div>
         <div className="detail-name">{product?.name}</div>
         <div className="detail-colour">
