@@ -1,7 +1,12 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { removeItem, addOne, removeOne } from '../redux/actions';
+import {
+  removeItem,
+  addOne,
+  removeOne,
+  resetSingleProduct,
+} from '../redux/actions';
 
 function Basket(props) {
   const dispatch = useDispatch();
@@ -30,7 +35,12 @@ function Basket(props) {
           </div>
         </>
       ))}
-      <button onClick={() => props.history.push('/')} className="back">
+      <button
+        onClick={() => {
+          dispatch(resetSingleProduct());
+          props.history.push('/');
+        }}
+        className="back">
         Back to List
       </button>
     </section>

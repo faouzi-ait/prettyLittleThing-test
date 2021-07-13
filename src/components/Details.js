@@ -40,15 +40,8 @@ function Details(props) {
       {product.img ? (
         <img src={product.img} alt="product" width="200" />
       ) : (
-        <div
-          style={{
-            width: '170px',
-            height: '170px',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}>
-          <img src="/spinner.gif" alt="" />
+        <div className="spinner">
+          <img src="/spinner.gif" alt="spinner" />
         </div>
       )}
       <div>
