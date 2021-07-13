@@ -5,6 +5,7 @@ import {
   LOADING_PRODUCT,
   GET_SINGLE_PRODUCT_SUCCESS,
   GET_SINGLE_PRODUCT_FAILURE,
+  RESET_SINGLE_PRODUCT,
   ADD_ITEM,
   REMOVE_ITEM,
   ADD_ONE,
@@ -46,6 +47,8 @@ export const singleProduct = (state = singleProductState, action) => {
       return { ...state, product: action.payload };
     case GET_SINGLE_PRODUCT_FAILURE:
       return { ...state, error: action.payload };
+    case RESET_SINGLE_PRODUCT:
+      return { ...state, product: {} };
     case LOADING_PRODUCT:
       return { ...state, loading: action.payload };
     default:

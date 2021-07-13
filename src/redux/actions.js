@@ -7,6 +7,7 @@ import {
   GET_SINGLE_PRODUCT_SUCCESS,
   GET_HOME_PAGE_PRODUCTS_FAILURE,
   GET_SINGLE_PRODUCT_FAILURE,
+  RESET_SINGLE_PRODUCT,
   
   ADD_ITEM,
   ADD_ONE,
@@ -43,6 +44,10 @@ export const getSingleProductSuccess = (payload) => {
 
 export const getSingleProductFailure = (payload) => {
   return { type: GET_SINGLE_PRODUCT_FAILURE, payload };
+};
+
+export const resetSingleProduct = () => {
+  return { type: RESET_SINGLE_PRODUCT };
 };
 
 export const loadingSingleProduct = (payload) => {

@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 
 import {
   getSingleProduct,
+  resetSingleProduct,
   addItem,
   removeItem,
   addOne,
@@ -64,7 +65,12 @@ function Details(props) {
         </>
       )}
 
-      <button onClick={() => props.history.push('/')} className="back">
+      <button
+        onClick={() => {
+          dispatch(resetSingleProduct());
+          props.history.push('/');
+        }}
+        className="back">
         Back to List
       </button>
       <button onClick={() => props.history.push('/cart')} className="back">
