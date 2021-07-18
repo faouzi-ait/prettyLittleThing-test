@@ -37,7 +37,7 @@ function Details(props) {
 
   return (
     <section className="detail-page">
-      {product.img ? (
+      {product?.img ? (
         <img src={product.img} alt="product" width="200" />
       ) : (
         <div className="spinner">
